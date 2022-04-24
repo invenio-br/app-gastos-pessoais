@@ -1,0 +1,27 @@
+<div id="<%= dom_id movimentacao %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Data:</strong>
+    <%= movimentacao.data %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Descricao:</strong>
+    <%= movimentacao.descricao %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Valor:</strong>
+    <%= movimentacao.valor %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Tipo:</strong>
+    <%= movimentacao.tipo %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this movimentacao", movimentacao, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this movimentacao', edit_movimentacao_path(movimentacao), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
