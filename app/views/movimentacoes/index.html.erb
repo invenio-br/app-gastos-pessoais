@@ -3,16 +3,21 @@
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
   <% end %>
 
-  <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Movimentações</h1>
-    <%= link_to 'Nova movimentação', new_movimentacao_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+  <div class="grid grid-cols-4 gap-4 mb-4">
+    <div class="p-6 rounded-lg shadow-lg bg-white">
+      <p>Saldo Atual</p>
+      <p class="text-2xl font-bold">
+        <%= number_to_currency @saldo %>
+      </p>
+    </div>
+
+    <%= link_to new_movimentacao_path,
+                class: "rounded-lg shadow-lg p-6 bg-blue-600 text-white block font-medium text-center" do %>
+      <span>Nova Movimentação</span>
+    <% end %>
   </div>
 
-  <div id="movimentacoes" class="min-w-full">
+  <div id="movimentacoes" class="grid grid-cols-1 gap-4 min-w-full">
     <%= render @movimentacoes %>
-
-    <h2 class="text-2xl">
-      <strong>Saldo Atual:</strong> <%= @saldo %>
-    </h2>
   </div>
 </div>
