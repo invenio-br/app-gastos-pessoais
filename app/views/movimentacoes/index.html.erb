@@ -15,6 +15,13 @@
                 class: "rounded-lg shadow-lg p-6 bg-blue-600 text-white block font-medium text-center" do %>
       <span>Nova Movimentação</span>
     <% end %>
+
+    <%= link_to destroy_usuario_session_path,
+                method: :delete,
+                class: "rounded-lg shadow-lg p-6 bg-blue-600 text-white block font-medium text-center" do %>
+      <span>Logado como <%= current_usuario.email %></span>
+      <span>Sair</span>
+    <% end %>
   </div>
 
   <div id="movimentacoes" class="grid grid-cols-1 gap-4 min-w-full">

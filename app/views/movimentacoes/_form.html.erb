@@ -18,7 +18,7 @@
 
   <div class="my-5">
     <%= form.label :data %>
-    <%= form.date_field :data, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.date_field :data, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full", max: Date.current %>
   </div>
 
   <div class="my-5">
